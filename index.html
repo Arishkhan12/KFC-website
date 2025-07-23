@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>KFC Pakistan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="day-mode">
+
+<div id="sidebar" class="bg-danger text-white p-4">
+  <h4 class="fw-bold mb-4">KFC</h4>
+  <ul class="nav flex-column">
+    <li class="nav-item">
+      <a class="nav-link text-white d-flex align-items-center gap-2" href="#">
+        <img src="images/store-locator.png" width="20" alt="Store"> Store Locator
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-white d-flex align-items-center gap-2" href="#">
+        <img src="images/track-order.png" width="20" alt="Track"> Track Order
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-white d-flex align-items-center gap-2" href="#">
+        <img src="images/Explore-menu.png" width="20" alt="Explore"> Explore Menu
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-white d-flex align-items-center gap-2" href="#">
+        <img src="images/phone-icon.webp" width="20" alt="About"> About Us
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-white" href="#">Feedback</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-white" href="#">Terms and Conditions</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-white" href="#">Privacy Policy</a>
+    </li>
+  </ul>
+</div>
+
+
+<div id="main-content">
+ 
+  <header class="d-flex justify-content-between align-items-center px-4 py-2 shadow bg-white sticky-top" id="kfc-header">
+    <div class="d-flex align-items-center gap-3">
+      <button class="btn btn-link fs-3 text-dark" id="menu-toggle"><i class="bi bi-list"></i></button>
+      <h3 class="fw-bold text-danger m-0">KFC</h3>
+    </div>
+    <form class="d-flex" role="search">
+      <input class="form-control me-2" type="search" placeholder="Search Items..." aria-label="Search">
+      <button class="btn btn-outline-dark" type="submit">Search</button>
+      
+    </form>
+    <div class="d-flex align-items-center gap-2">
+      <button class="btn btn-outline-danger active d-flex align-items-center gap-2" id="btn-delivery">🚚 DELIVERY</button>
+      <button class="btn btn-light d-flex align-items-center gap-2" id="btn-pickup">🏃 PICKUP</button>
+    </div>
+
+    <div class="d-flex align-items-center gap-3">
+      <div class="position-relative">
+        <i class="bi bi-bucket-fill fs-4 text-danger"></i>
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+      </div>
+      <button class="btn btn-danger">LOGIN</button>
+      <button class="btn btn-outline-dark" id="theme-toggle">🌙</button>
+    </div>
+  </header>
+
+  <div id="kfcCarousel" class="carousel slide" data-bs-ride="carousel">
+
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#kfcCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+    <button type="button" data-bs-target="#kfcCarousel" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#kfcCarousel" data-bs-slide-to="2"></button>
+    <button type="button" data-bs-target="#kfcCarousel" data-bs-slide-to="3"></button>
+  </div>
+
+  
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="3000">
+      <img src="images/banne.jpg" class="d-block w-100" alt="Banner 1">
+    </div>
+    <div class="carousel-item" data-bs-interval="3000">
+      <img src="images/banner-2.jpg" class="d-block w-100" alt="Banner 2">
+    </div>
+    <div class="carousel-item" data-bs-interval="3000">
+      <img src="images/banner-3.jpg" class="d-block w-100" alt="Banner 3">
+    </div>
+    <div class="carousel-item" data-bs-interval="3000">
+      <img src="images/favorites-banner.afff26bc6d0127f68baa.png" class="d-block w-100" alt="banner 4">
+    </div>
+  </div>
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#kfcCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#kfcCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+  <section class="container mt-5">
+    <h2 class="text-center mb-4">Popular Items</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card product-item">
+          <img src="images/mighty-bugre.png" class="card-img-top" alt="mighty-bugre">
+          <div class="card-body">
+            <h5 class="card-title">Zinger Burger</h5>
+            <p class="card-text fw-bold text-dark">Rs. 750</p>
+            <p class="card-text">Spicy, crispy & delicious!</p>
+            <a href="#" class="btn btn-danger">Order Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card product-item">
+          <img src="images/krunch burger.png" class="card-img-top" alt="Krunch burger">
+          <div class="card-body">
+            <h5 class="card-title">Krunch Burger with cold drink</h5>
+            <p class="card-text fw-bold text-dark">Rs. 1050</p>
+            <p class="card-text">Affordable & tasty </p>
+            <a href="#" class="btn btn-danger">Order Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card product-item">
+          <img src="images/family-festival-3.png" class="card-img-top" alt="family-festival-3">
+          <div class="card-body">
+            <h5 class="card-title">family-festival-3</h5>
+            <p class="card-text fw-bold text-dark">Rs. 2500</p>
+            <p class="card-text">Enough for the family</p>
+            <a href="#" class="btn btn-danger">Order Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card product-item">
+          <img src="images/kfc-meal.afc417f5d19998efd26b.png" class="card-img-top" alt="kfc-meal">
+          <div class="card-body">
+            <h5 class="card-title">kfc meal</h5>
+            <p class="card-text fw-bold text-dark">Rs. 1500</p>
+            <p class="card-text">Enjoy with kfc</p>
+            <a href="#" class="btn btn-danger">Order Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card product-item">
+          <img src="images/Bucket image.png" class="card-img-top" alt="Bucket">
+          <div class="card-body">
+            <h5 class="card-title">Bucket</h5>
+            <p class="card-text fw-bold text-dark">Rs. 1750</p>
+            <p class="card-text">Enjoy our kfc Bucket</p>
+            <a href="#" class="btn btn-danger">Order Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card product-item">
+          <img src="images/newone.png" class="card-img-top" alt="promotions">
+          <div class="card-body">
+            <h5 class="card-title">Promotions</h5>
+            <p class="card-text fw-bold text-dark">Rs. 2050</p>
+            <p class="card-text">Our new Promotions</p>
+            <a href="#" class="btn btn-danger">Order Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<footer class="bg-dark text-white pt-5 pb-3 mt-5">
+  <div class="container">
+    <div class="row text-start">
+      <div class="col-md-3">
+        <h5 class="fw-bold">KFC Pakistan</h5>
+        <p>It's Finger Lickin' Good!</p>
+      </div>
+      <div class="col-md-2">
+        <h6 class="fw-bold">Explore</h6>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-white text-decoration-none">About</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Contact Us</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Track Order</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Mitao Bhookh</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Store Locator</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h6 class="fw-bold">Get in Touch</h6>
+        <p>Email: support@kfc.com.pk</p>
+        <p>Phone: 111-532-532</p>
+        <p>Address: Lahore, Pakistan</p>
+      </div>
+      <div class="col-md-3">
+        <h6 class="fw-bold">Follow Us</h6>
+        <a href="images/Facebook-Square.png" class="text-white me-2"><i class="bi bi-facebook"></i></a>
+        <a href="images/instagram-image.png" class="text-white me-2"><i class="bi bi-instagram"></i></a>
+        <a href="images/youtube-image.png" class="text-white"><i class="bi bi-youtube"></i></a>
+      </div>
+    </div>
+    <hr class="bg-white">
+    <p class="text-center m-0">&copy; 2025 KFC Pakistan. All rights reserved.</p>
+  </div>
+</footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

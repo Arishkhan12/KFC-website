@@ -1,0 +1,38 @@
+body.day-mode {
+  background-color: #ffffff;
+  color: #000;
+}
+body.night-mode {
+  background-color: #121212;
+  color: #eee;
+}
+#sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  z-index: 999;
+  transition: 0.3s ease;
+  overflow-y: auto;
+}
+#sidebar.active {
+  left: 0;
+}
+#main-content {
+  transition: margin-left 0.3s ease;
+  margin-left: 0;
+}
+#main-content.shifted {
+  margin-left: 250px;
+}
+#sidebar .nav-link:hover {
+  background-color: #ffffff33;
+  border-radius: 5px;
+}
+.product-card {
+  transition: transform 0.3s ease;
+}
+.product-card:hover {
+  transform: scale(1.05);
+}

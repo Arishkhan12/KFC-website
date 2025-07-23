@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>KFC Menu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="day-mode">
+
+<!-- Header -->
+<header class="d-flex justify-content-between align-items-center px-4 py-2 shadow bg-white sticky-top">
+  <div class="d-flex align-items-center gap-3">
+    <button class="btn btn-link fs-3 text-dark" id="menu-toggle"><i class="bi bi-list"></i></button>
+    <h3 class="fw-bold text-danger m-0">KFC</h3>
+  </div>
+  <div class="d-flex align-items-center gap-2">
+    <button class="btn btn-outline-danger active">🚚 DELIVERY</button>
+    <button class="btn btn-light">🏃 PICKUP</button>
+  </div>
+  <div class="d-flex align-items-center gap-3">
+    <div class="position-relative">
+      <i class="bi bi-bucket-fill fs-4 text-danger"></i>
+      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+    </div>
+    <button class="btn btn-danger">LOGIN</button>
+  </div>
+</header>
+
+
+<section class="container my-5">
+  <h4 class="fw-bold mb-4">EXPLORE MENU <hr class="border-2 border-danger opacity-100 w-25"></h4>
+  <div class="d-flex overflow-auto gap-4">
+    
+    <div class="text-center">
+      <img src="images/zinger.png" class="rounded-circle" width="120" alt="...">
+      <p class="mt-2">Ala-Carte-&-Combos</p>
+    </div>
+    <div class="text-center">
+      <img src="images/signature.png" class="rounded-circle" width="120" alt="...">
+      <p class="mt-2">Signature-Boxes</p>
+    </div>
+    <div class="text-center">
+      <img src="images/sharing.png" class="rounded-circle" width="120" alt="...">
+      <p class="mt-2">Sharing</p>
+    </div>
+    <div class="text-center">
+      <img src="images/snacks.png" class="rounded-circle" width="120" alt="...">
+      <p class="mt-2">Snacks-&-Beverages</p>
+    </div>
+    <div class="text-center">
+      <img src="images/midnight.png" class="rounded-circle" width="120" alt="...">
+      <p class="mt-2">Midnight (Start at 12am)</p>
+    </div>
+  </div>
+</section>
+
+<section class="container my-5">
+  <h4 class="fw-bold mb-4">BEST SELLERS <hr class="border-2 border-danger opacity-100 w-25"></h4>
+  <div class="row g-4">
+    <!-- Product 1 -->
+    <div class="col-md-3">
+      <div class="card shadow-sm text-center">
+        <img src="images/krunch-burger.png" class="card-img-top" alt="krunch-combo">
+        <div class="card-body">
+          <h5 class="card-title">Krunch Burger</h5>
+          <span class="badge bg-danger fs-6">Rs. 310</span>
+        </div>
+      </div>
+    </div>
+    <!-- Product 2 -->
+    <div class="col-md-3">
+      <div class="card shadow-sm text-center">
+        <img src="images/krunch-combo.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Krunch Combo</h5>
+          <span class="badge bg-danger fs-6">Rs. 590</span>
+        </div>
+      </div>
+    </div>
+    <!-- Product 3 -->
+    <div class="col-md-3">
+      <div class="card shadow-sm text-center">
+        <img src="images/chicken-chips.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Chicken & Chips</h5>
+          <span class="badge bg-danger fs-6">Rs. 620</span>
+        </div>
+      </div>
+    </div>
+    <!-- Product 4 -->
+    <div class="col-md-3">
+      <div class="card shadow-sm text-center">
+        <img src="images/wings-bucket.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Hot Wings Bucket</h5>
+          <span class="badge bg-danger fs-6">Rs. 480</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3 mt-5">
+  &copy; 2025 KFC Pakistan. All rights reserved.
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
