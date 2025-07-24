@@ -1,10 +1,51 @@
-body.day-mode {
+.day-mode {
   background-color: #ffffff;
   color: #000;
 }
-body.night-mode {
+
+.night-mode {
   background-color: #121212;
-  color: #eee;
+  color: #fff;
+}
+
+.night-mode .card {
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+.night-mode .navbar,
+.night-mode footer {
+  background-color: #222 !important;
+}
+.night-mode header,
+.night-mode footer,
+.night-mode #sidebar {
+  background-color: #1a1a1a !important;
+}
+.product-img {
+  width: 70%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#sidebar.d-none {
+  display: none !important;
+}
+#Wrapper.sidebar-hidden #sidebar{
+  display: none;
+}
+
+
+html{
+  scroll-behavior: smooth;
+}
+#kfc-header.scrolled{
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  transition: all 0.3s ease;
+
 }
 #sidebar {
   position: fixed;
@@ -13,7 +54,7 @@ body.night-mode {
   width: 250px;
   height: 100%;
   z-index: 999;
-  transition: 0.3s ease;
+  transition: all 0.3s ease;
   overflow-y: auto;
 }
 #sidebar.active {
@@ -36,3 +77,4 @@ body.night-mode {
 .product-card:hover {
   transform: scale(1.05);
 }
+
