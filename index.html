@@ -69,31 +69,45 @@
 
 <div id="main-content">
  
-  <header class="d-flex justify-content-between align-items-center px-4 py-2 shadow bg-white sticky-top" id="kfc-header">
-    <div class="d-flex align-items-center gap-3">
-      <button class="btn btn-link fs-3 text-dark" id="menu-toggle"><i class="bi bi-list"></i></button>
-      <h3 class="fw-bold text-danger m-0">KFC</h3>
-    </div>
-    <form class="d-flex" role="search">
-      <input class="form-control me-2" type="search" placeholder="Search Items..." aria-label="Search">
-      <button class="btn btn-outline-dark" type="submit">Search</button>
+  <header class="px-3 py-2 shadow bg-white sticky-top" id="kfc-header">
+  <div class="container-fluid">
+    <div class="row align-items-center g-2">
       
-    </form>
-    <div class="d-flex align-items-center gap-2">
-      <button class="btn btn-outline-danger active d-flex align-items-center gap-2" id="btn-delivery">🚚 DELIVERY</button>
-      <button class="btn btn-light d-flex align-items-center gap-2" id="btn-pickup">🏃 PICKUP</button>
-    </div>
+      <!-- Left Logo + Sidebar Toggle -->
+      <div class="col-6 col-md-3 d-flex align-items-center gap-2">
+        <button class="btn btn-link fs-3 text-dark p-0" id="menu-toggle">
+          <i class="bi bi-list"></i>
+        </button>
+        <h3 class="fw-bold text-danger m-0">KFC</h3>
+      </div>
 
-   <div class="position-relative">
-  <i class="bi bi-bucket-fill fs-4 text-danger"></i>
-  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
-  <button class="btn btn-outline-danger btn-sm mt-1" id="btn-badge">View Cart</button>
-     </div>
+      <!-- Search Bar -->
+      <div class="col-12 col-md-4 mt-2 mt-md-0">
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search Items..." aria-label="Search">
+          <button class="btn btn-outline-dark" type="submit">Search</button>
+        </form>
+      </div>
 
-      <button class="btn btn-danger">LOGIN</button>
-      <button class="btn btn-outline-dark" id="theme-toggle">🌙</button>
+      <!-- Buttons (Delivery, Pickup, Cart, Login, Theme) -->
+      <div class="col-12 col-md-5 mt-2 mt-md-0">
+        <div class="d-flex flex-wrap justify-content-md-end align-items-center gap-2">
+          <button class="btn btn-outline-danger active d-flex align-items-center gap-2" id="btn-delivery">🚚 DELIVERY</button>
+          <button class="btn btn-light d-flex align-items-center gap-2" id="btn-pickup">🏃 PICKUP</button>
+
+          <div class="position-relative">
+            <i class="bi bi-bucket-fill fs-4 text-danger"></i>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+            <button class="btn btn-outline-danger btn-sm mt-1" id="btn-badge">View Cart</button>
+          </div>
+
+          <button class="btn btn-danger">LOGIN</button>
+          <button class="btn btn-outline-dark" id="theme-toggle">🌙</button>
+        </div>
+      </div>
     </div>
-  </header>
+  </div>
+</header>
 
   <div id="kfcCarousel" class="carousel slide" data-bs-ride="carousel">
 

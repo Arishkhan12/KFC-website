@@ -170,18 +170,107 @@ document.getElementById('confirmOrderBtn').addEventListener('click', function ()
     badge.textContent = count + 1;
   }
 });
-//------cart model/ page render----
-const cartItems=[];
-const modal = bootstrap.Modal.getInstance(document.getElementById('orderModal'));
-modal.hide();
-
-cartItems.push({ name: title, price: price });
+// --- Cart Items Initialization ---
+let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
 
 const badge = document.querySelector('.badge');
-if (badge) {
-  let count = parseInt(badge.textContent);
-  badge.textContent = count + 1;
+const cartBody = document.getElementById('cart-body');
+const viewCartModal = new bootstrap.Modal(document.getElementById('viewCartModal'));
+
+// --- Update Cart Badge ---
+function updateBadge() {
+  badge.textContent = cartItems.length;
 }
+
+// --- Save to localStorage ---
+function saveCart() {
+  localStorage.setItem("cart", JSON.stringify(cartItems));
+}
+
+// --- Render Cart in Modal ---
+function renderCart() {
+  cartBody.innerHTML = '';
+
+  if (cartItems.length === 0) {
+    cartBody.innerHTML = '<p class="text-center">Cart is empty 🪣</p>';
+    return;
+  }
+
+  cartItems.forEach((item, index) => {
+    cartBody.innerHTML += `
+      <div class="d-flex justify-content-between align-items-center border-bottom py-2">
+        <div>${index + 1}. ${item.name} - ${item.price}</div>
+        <button class="btn btn-sm btn-danger" onclick="removeItem(${index})">Delete</button>
+      </div>
+    `;
+  });
+
+  cartBody.innerHTML += `
+    <div class="text-end mt-3">
+      <button class="btn btn-outline-danger btn-sm" onclick="clearCart()">Clear Cart</button>
+    </div>
+  `;
+}
+
+// --- Add to Cart ---
+function addToCart(name, price) {
+  cartItems.push({ name, price });
+  saveCart();
+  updateBadge();
+}
+
+// --- Remove Item by Index ---
+function removeItem(index) {
+  cartItems.splice(index, 1);
+  saveCart();
+  updateBadge();
+  renderCart();
+}
+
+// --- Clear Entire Cart ---
+function clearCart() {
+  cartItems = [];
+  saveCart();
+  updateBadge();
+  renderCart();
+}
+
+// --- Show Cart on Button Click ---
+document.getElementById('btn-badge').addEventListener('click', () => {
+  renderCart();
+  viewCartModal.show();
+});
+
+// --- Also allow cart icon click to open modal ---
+document.querySelector('.bi-bucket-fill').addEventListener('click', () => {
+  renderCart();
+  viewCartModal.show();
+});
+
+// --- Add item on confirm order ---
+document.getElementById('confirmOrderBtn').addEventListener('click', () => {
+  const name = document.getElementById('modalItemName').textContent;
+  const price = document.getElementById('modalItemPrice').textContent;
+  addToCart(name, price);
+
+  alert("✅ Order Confirmed!");
+  const orderModal = bootstrap.Modal.getInstance(document.getElementById('orderModal'));
+  orderModal.hide();
+});
+
+// --- On Load ---
+window.addEventListener("DOMContentLoaded", () => {
+  updateBadge();
+});
+// ✅ Add This In Your HTML
+// Make sure your modal has this structure inside #cart-body:
+
+// html
+// Copy
+// Edit
+// <div class="modal-body" id="cart-body">
+//   <!-- Items injected here -->
+// </div>
 //--- Model open+ populate---
 
 document.querySelector('.bi-bucket-fill').addEventListener('click', function () {
